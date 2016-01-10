@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-family: tahoma;
+    direction: rtl;
+    color: #0c1b6e;
+}
+
+@font-face {
+    font-family: BYekan;
+    src: url(../fonts/BYekan.woff);
+}
+
+@font-face {
+    font-family: IranSans;
+    src: url(../fonts/IranSans.woff);
+}
+
+.responsive-transition {
+    transition: .5s;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper-border {
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    box-shadow: 0 0 30px #d6d6d6;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.form-group {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+/*========== entry ==========*/
+
+.logo {
+    float: right;
+    margin: 10px;
+}
+
+.date-bar {
+    text-align: left;
+    padding: 2px 0 2px 20px;
+    background-color: #e6e6e6;
+    font-size: 14px;
+    direction: ltr;
+    color: #0c1b6e;
+}
+
+.entry-box {
+    width: 450px;
+    height: 300px;
+    margin: 40px auto;
+    background-color: #e6e6e6;
+}
+
+.entry-box header {
+    padding-right: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    background-color: #c6c6c6;
+    font-family: BYekan
+}
+
+.entry-box form {
+    text-align: center;
+}
+
+.entry-box form img {
+    margin-top: 30px;
+}
+
+.entry-box form input[type=text] {
+    width: 250px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #b4b4b4;
+    padding-right: 10px;
+    border-radius: 4px;
+    box-shadow: inset 5px 5px 10px #f3f3f3;
+}
+
+.entry-box form input[type=text]:focus {
+    border-color: #36b222;
+}
+
+.entry-box form input[type=submit] {
+    width: 123px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.entry-box footer {
+    margin-top: 45px;
+}
+
+.entry-box p {
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#public-btn {
+    background-color: #36b222;
+    height: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#member-btn {
+    background-color: #ff9c24;
+    height: 40px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact-us {
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    color: #0c1b6e;
+}
+
+/*========== result ==========*/
+
+.date-bar {
+    text-align: left;
+    padding: 2px 0 2px 20px;
+    background-color: #e6e6e6;
+    font-size: 14px;
+    direction: ltr;
+    color: #0c1b6e;
+}
+
+.flight-info {
+    height: 60px;
+    background-color: #e6e6e6;
+}
+
+.right-side {
+    width: 35%;
+    margin-top: 1%;
+    padding: 0 1% 1% 0;
+    float: right;
+}
+
+.flight-search {
+    width: 100%;
+    font-size: 14px;
+    color: #dbdbdb;
+}
+
+.flight-search header {
+    background-color: #c6c6c6;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0c1b6e;
+    font-family: BYekan;
+}
+
+.flight-search form {
+    padding: 10px;
+    background-color: #e6e6e6;
+    color: #0c1b6e;
+}
+
+.flight-search form input[type="text"] {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    padding-right: 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+    box-shadow: inset 5px 5px 10px #f3f3f3;
+}
+
+.flight-search form input:focus {
+    border-color: #36b222;
+}
+
+.flight-search form select {
+    height: 30px;
+    margin-left: 9px;
+    padding-right: 5px;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+    box-shadow: inset 5px 5px 10px #f3f3f3;
+}
+
+.flight-search form select:focus {
+    border-color: #36b222;
+}
+
+.flight-search form input[type="radio"] {
+    margin-left: 20px;
+}
+
+.flight-search form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #36b222;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.airline-filter {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: #e6e6e6;
+}
+
+.airline-filter header {
+    background-color: #c6c6c6;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0c1b6e;
+    font-family: BYekan;
+}
+
+.airline-filter ul {
+    list-style: none;
+    padding: 2%;
+}
+
+.airline-filter ul li {
+    display: block;
+    margin: 20px 0;
+}
+
+.airline-filter ul li input {
+    margin-left: 5%;
+}
+
+.left-side {
+    width: 62%;
+    margin-top: 1%;
+    padding: 0 1% 1% 1%;
+    float: left;
+}
+
+.departure {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.departure header {
+    width: 45%;
+    padding: 10px 45px 10px 0;
+    margin-bottom: 20px;
+    background: linear-gradient(270deg, #0c1b6e, #fff);
+    font-family: BYekan;
+    font-size: 16px;
+    color: #fff;
+    word-spacing: 5px;
+    position: relative;
+}
+
+.departure header img {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.arrival {
+    width: 100%;
+}
+
+.arrival header {
+    width: 45%;
+    padding: 10px 45px 10px 0;
+    margin-bottom: 20px;
+    background: linear-gradient(270deg, #0c1b6e, #fff);
+    font-family: BYekan;
+    font-size: 16px;
+    color: #fff;
+    word-spacing: 5px;
+    position: relative;
+}
+
+.arrival header img {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.result {
+    width: 100%;
+}
+
+.result table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+}
+
+.result table td {
+    padding: 5px;
+}
+
+.result table thead td {
+    font-family: BYekan;
+    text-align: center;
+    background-color: #c6c6c6;
+}
+
+.result table tbody td  {
+    text-align: center;
+    background-color: #e6e6e6;
+}
+
+.info {
+    background-color: #e6e6e6;
+}
+
+.info header {
+    background-color: #c6c6c6;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0c1b6e;
+    font-family: BYekan;
+}
+
+.info table {
+    border-spacing: 20px;
+    background-color: #e6e6e6;
+    font-size: 14px;
+}
+
+/*========== media ==========*/
+
+@media screen and (max-width: 860px) {
+
+    .right-side {
+        width: 100%;
+        padding: 0;
+        margin-top: 2%;
+    }
+
+    .left-side {
+        width: 100%;
+        padding: 0;
+        margin-top: 2%;
+    }
+    
+        .entry-box footer {
+        margin-top: 35px;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .result {
+        font-size: 12px;
+    }
+
+    .date-bar {
+        text-align: center;
+        padding: 2px 0;
+    }
+
+    .entry-box {
+        width: 100%;
+    }
+    
+    .contact-us {
+        font-size: 10px;
+    }
+    
+    .info table {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+}
