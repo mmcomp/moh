@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,58 +35,159 @@
                     <div class="flight-search">
                         <header>جستجوی پرواز</header>
                         <div class="clearfix"></div>
-                        <form method="post" action="<?php echo base_url(); ?>index.php/flight/flight_ctrl">
-                            <div class="form-group">
-                                <label>یک طرفه : </label>
-                                <input type="radio" name="way" value="one_way" checked="">
-                                <label>دو طرفه : </label>
-                                <input type="radio" name="way" value="two_way">
+                        <ul>
+                            <li id="charter-tab">پرواز چارتری</li>
+                            <li id="international-tab">پرواز خارجی</li>
+                            <li id="system-tab">پرواز سیستمی</li>
+                        </ul>
+                        <div class="flight-tab-content">
+                            <div id="charter">
+                                <form method="post">
+                                    <div class="form-group">
+                                        <label>یک طرفه : </label>
+                                        <input type="radio" name="way" value="one_way" checked="">
+                                        <label>دو طرفه : </label>
+                                        <input type="radio" name="way" value="two_way">
+                                    </div>
+                                    <label>مبداء : </label>
+                                    <div class="form-group">
+                                        <input type="text" name="from_city" id="from_city" class="autocomplete">
+                                    </div>
+                                    <label>مقصد : </label>
+                                    <div class="form-group">
+                                        <input type="text" name="to_city" id="to_city" class="autocomplete">
+                                    </div>
+                                    <label>تاریخ پرواز : </label>
+                                    <div class="form-group">
+                                        <input type="text" style="width: 40%;" class="datepicker" readonly>
+                                        تا
+                                        <input type="text" style="width: 40%;" class="datepicker" readonly>
+                                    </div>
+                                    <label>اطلاعات مسافرین : </label>
+                                    <div class="form-group">
+                                        <label>بزرگسال</label>
+                                        <select id="adult" onchange="set_infant();">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                        <label>کودک</label>
+                                        <select>
+                                            <option selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <label>نوزاد</label>
+                                        <select id="infant">
+                                            <option selected>0</option>
+                                            <option>1</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" value="جستجو">
+                                </form>
                             </div>
-                            <label>مبداء : </label>
-                            <div class="form-group">
-                                <input type="text" name="from_city" id="from_city" class="autocomplete">
+                            <div id="international">
+                                <form method="post" action="">
+                                    <label>مبداء : </label>
+                                    <div class="form-group">
+                                        <input type="text" name="from_city" id="from_city" class="autocomplete">
+                                    </div>
+                                    <label>مقصد : </label>
+                                    <div class="form-group">
+                                        <input type="text" name="to_city" id="to_city" class="autocomplete">
+                                    </div>
+                                    <label>تاریخ پرواز : </label>
+                                    <div class="form-group">
+                                        <input type="text" style="width: 40%;" class="datepicker" readonly>
+                                    </div>
+                                    <label>اطلاعات مسافرین : </label>
+                                    <div class="form-group">
+                                        <label>بزرگسال</label>
+                                        <select id="adult" onchange="set_infant();">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                        <label>کودک</label>
+                                        <select>
+                                            <option selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <label>نوزاد</label>
+                                        <select id="infant">
+                                            <option selected>0</option>
+                                            <option>1</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" value="جستجو">
+                                </form>
                             </div>
-                            <label>مقصد : </label>
-                            <div class="form-group">
-                                <input type="text" name="to_city" id="to_city" class="autocomplete">
+                            <div id="system">
+                                <form method="post" action="">
+                                    <label>مبداء : </label>
+                                    <div class="form-group">
+                                        <input type="text" name="from_city" id="from_city" class="autocomplete">
+                                    </div>
+                                    <label>مقصد : </label>
+                                    <div class="form-group">
+                                        <input type="text" name="to_city" id="to_city" class="autocomplete">
+                                    </div>
+                                    <label>تاریخ پرواز : </label>
+                                    <div class="form-group">
+                                        <input type="text" style="width: 40%;" class="datepicker" readonly>
+                                    </div>
+                                    <label>اطلاعات مسافرین : </label>
+                                    <div class="form-group">
+                                        <label>بزرگسال</label>
+                                        <select id="adult" onchange="set_infant();">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                        <label>کودک</label>
+                                        <select>
+                                            <option selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                        <label>نوزاد</label>
+                                        <select id="infant">
+                                            <option selected>0</option>
+                                            <option>1</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit" value="جستجو">
+                                </form>
                             </div>
-                            <label>تاریخ پرواز : </label>
-                            <div class="form-group">
-                                <input type="text" style="width: 40%;" class="datepicker" readonly>
-                                تا
-                                <input type="text" style="width: 40%;" class="datepicker" readonly>
-                            </div>
-                            <label>اطلاعات مسافرین : </label>
-                            <div class="form-group">
-                                <label>بزرگسال</label>
-                                <select id="adult" onchange="set_infant();">
-                                    <option value="1" selected>1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                </select>
-                                <label>کودک</label>
-                                <select>
-                                    <option selected>0</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                                <label>نوزاد</label>
-                                <select id="infant">
-                                    <option selected>0</option>
-                                    <option>1</option>
-                                </select>
-                            </div>
-                            <input type="submit" value="جستجو">
-                        </form>
+                        </div>
                     </div>
                     <!--airline-filter-->
                     <div class="airline-filter">

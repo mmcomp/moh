@@ -1,13 +1,13 @@
 <?php
 
-class Flight_Model extends CI_Model {
+class System_Model extends CI_Model {
 
     function __construct() {
         parent::__construct();
     }
 
-    function get_flight() {
-        $query = $this->db->get('fake');
+    function Function_Name() {
+        $query = $this->db->query('SELECT * FROM tablename');
         return $query->result_array();
     }
 

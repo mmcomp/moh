@@ -179,9 +179,34 @@
     font-family: BYekan;
 }
 
+.flight-tab-content {
+    background-color: #e6e6e6;
+}
+
+.flight-search ul {
+    list-style: none;
+    background-color: #747474;
+}
+
+.flight-search ul li {
+    float: right;
+    width: 33.3333%;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.flight-search ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 .flight-search form {
     padding: 10px;
-    background-color: #e6e6e6;
     color: #0c1b6e;
 }
 
@@ -355,6 +380,8 @@
     font-size: 14px;
 }
 
+
+
 /*========== media ==========*/
 
 @media screen and (max-width: 860px) {
@@ -370,8 +397,8 @@
         padding: 0;
         margin-top: 2%;
     }
-    
-        .entry-box footer {
+
+    .entry-box footer {
         margin-top: 35px;
     }
 
@@ -391,14 +418,18 @@
     .entry-box {
         width: 100%;
     }
-    
+
     .contact-us {
         font-size: 10px;
     }
-    
+
     .info table {
         font-size: 10px;
         font-weight: 600;
+    }
+    
+    .flight-search ul {
+        text-align: center;
     }
 
 }
